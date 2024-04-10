@@ -5,6 +5,6 @@ import {TransparentProxyFactory} from 'solidity-utils/src/contracts/transparent-
 
 contract FactoryExampleTwo {
   constructor(address proxyFactory) {
-    TransparentProxyFactory(proxyFactory).createProxyAdmin(address(1234));
+    TransparentProxyFactory(proxyFactory).createProxyAdmin(address(60000 + 1234));
   }
 }

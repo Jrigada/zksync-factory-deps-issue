@@ -9,8 +9,8 @@ contract DeployFactoryExampleTwo is Script {
   function run() external {
     vm.startBroadcast();
 
-    // address proxyFactory = address(new TransparentProxyFactory());
-    new FactoryExampleTwo(0xe3B390B7b597b17517197F52C16429179A16A6FE);
+    address proxyFactory = address(new TransparentProxyFactory());
+    new FactoryExampleTwo(proxyFactory);
 
     vm.stopBroadcast();
   }
